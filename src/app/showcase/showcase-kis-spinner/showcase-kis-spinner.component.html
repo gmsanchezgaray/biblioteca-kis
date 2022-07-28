@@ -1,3 +1,19 @@
-<p>
-  <kis-spinner></kis-spinner>
-</p>
+<div>
+  <div>
+    {{ "Modo actual:" + (embedded ? "Embebido" : "No embebido") }}
+  </div>
+
+  <div>
+    <button (click)="activarSpinner()">Activar spinner</button>
+    <button (click)="cambiarModo()">Cambiar modo</button>
+  </div>
+  <div class="embedded">
+    <kis-spinner *ngIf="embedded" [embedded]="true"></kis-spinner>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum
+    laudantium, natus incidunt iusto tempora laborum, molestias, at fuga
+    praesentium illum provident perferendis consequatur illo dolorum culpa quia
+    voluptatem vitae?
+  </div>
+
+  <kis-spinner *ngIf="!embedded"></kis-spinner>
+</div>

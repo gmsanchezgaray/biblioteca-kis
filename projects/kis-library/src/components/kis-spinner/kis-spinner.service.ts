@@ -1,10 +1,21 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class KisSpinnerService {
+  private _show: boolean;
 
-constructor() { }
+  constructor() {}
 
+  public get show(): boolean {
+    return this._show;
+  }
+
+  showSpinner() {
+    this._show = true;
+  }
+  hideSpinner() {
+    this._show = false;
+  }
 }

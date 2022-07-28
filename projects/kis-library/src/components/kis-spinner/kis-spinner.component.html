@@ -1,3 +1,12 @@
-<p>
-  kis-spinner works!
-</p>
+<div
+  *ngIf="kisSpinner.show"
+  class="kis-spinner"
+  [ngClass]="{
+    'kis-spinner--overlay': !embedded,
+    'kis-spinner--overlay-embedded': embedded
+  }"
+>
+  <div class="kis-spinner__spinner">
+    <div class="loader"></div>
+  </div>
+</div>
