@@ -1,0 +1,19 @@
+<div class="kis-toast">
+  <div
+    class="kis-toast__container"
+    [ngClass]="'text-light bg-' + toast.type + ' border' + toast.type"
+    *ngFor="let toast of toastService.toasts"
+  >
+    <div class="kis-toast__container--title">
+      <span
+        class="kis-toast__container--title--message"
+        (click)="closeToast(toast)"
+        >{{ toast.title }}</span
+      >
+      <i class="fa fa-times kis-toast__container--title--close-toast"></i>
+    </div>
+    <div class="kis-toast__container--content">
+      <span>{{ toast.message }}</span>
+    </div>
+  </div>
+</div>
